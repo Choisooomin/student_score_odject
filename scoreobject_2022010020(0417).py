@@ -36,7 +36,7 @@ class StudentManagementSystem:
         self.students = []
 
     def input_students(self):
-        for _ in range(5):  # 기본적으로 5명의 학생 입력
+        for _ in range(5):  # 5명의 학생 입력
             student_id = input("학번: ")
             name = input("이름: ")
             scores = [float(input(f"{subject}: ")) for subject in ['영어', 'C-언어', '파이썬']]
@@ -100,15 +100,15 @@ class StudentManagementSystem:
             elif choice in options:
                 action = options[choice][1]
                 if action:
-                    action()  # 선택된 옵션의 함수 실행
+                    action()  
             else:
                 print("잘못된 입력입니다. 다시 시도해주세요.")
 
 def main():
     system = StudentManagementSystem()
-    system.input_students()  # 먼저 학생 정보 입력
-    system.output_students()  # 입력된 학생 정보 출력
-    system.menu()  # 메뉴 기능 실행
+    system.input_students()  
+    system.output_students()  
+    system.menu()  
 
 if __name__ == "__main__":
     main()
